@@ -10,7 +10,7 @@ O *Light Boilerplate* é um boilerplate simples e de fácil entendimento para au
 
 ```sh
 # clone o repositorio 
-$ git clone //github.com/Cleysonlb/Light-Boilerplate/
+$ git clone https://github.com/Cleysonlb/Light-Boilerplate
 $ cd Light-Boilerplate
 
 # Instale as dependencias
