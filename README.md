@@ -1,5 +1,22 @@
 # Light-Boilerplate
 
+O *Light Boilerplate* é um boilerplate simples e de fácil entendimento para auxiliar no desenvolvimento de projetos, contando com algumas ferramentas para automatizar e facilitar todo o processo como:
+
+- [Stylus](http://stylus-lang.com/) - pré-processador CSS
+- [Jeet](http://jeet.gs/) - Grid semantica
+- [Rupture](http://jenius.github.io/rupture/) - Media queries
+
+# Instalação
+
+```sh
+# clone o repositorio 
+$ git clone //github.com/Cleysonlb/Light-Boilerplate/
+$ cd Light-Boilerplate
+
+# Instale as dependencias
+$ npm install
+```
+
 Estrutura de pasta / Arquivos
 
 ```sh
@@ -31,3 +48,5 @@ Light-Boilerplate -
 	index.html
 	404.html
 ```
+
+>Quem tiver interesse em ajudar a melhorar o Light-Boilerplate adicionando funcionalidades e ferramentas fique a vontade :)
