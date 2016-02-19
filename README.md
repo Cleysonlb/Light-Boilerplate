@@ -1,4 +1,4 @@
-# Light-Boilerplate
+![Fast](build/img/light-boilerplate-logo.png)
 
 O *Light Boilerplate* é um boilerplate simples e de fácil entendimento para auxiliar no desenvolvimento de projetos, contando com algumas ferramentas para automatizar e facilitar todo o processo como:
 
