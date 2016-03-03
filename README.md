@@ -33,14 +33,19 @@ Light-Boilerplate -
 			main.js
 		/styl
 			/base
-				typography.styl
-			/component
-				buttons.styl
-			/helper
-				mixin.styl
-				variable.styl
-			/libs
-				reset.styl
+				_base.styl
+			/components
+				_components.styl
+			/generic
+				_generic.reset.styl
+			/objects
+				_objects.styl
+			/settings
+				_settings.variable.styl
+			/tools
+				_tools.mixin.styl
+			/trumps
+				_trumps.styl
 			main.styl
 	.editorconfig
 	gulpfile.js
