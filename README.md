@@ -6,6 +6,10 @@ O *Light Boilerplate* é um boilerplate simples e de fácil entendimento para au
 - [Jeet](http://jeet.gs/) - Grid semantica
 - [Rupture](http://jenius.github.io/rupture/) - Media queries
 
+# Pattern CSS
+
+O pattern para o CSS utilizado nesse boilerplate é o [ITCSS](http://itcss.io/) deixando o CSS mais organizado e escalável.
+
 # Instalação
 
 ```sh
