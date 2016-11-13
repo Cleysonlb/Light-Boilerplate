@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
 
 //Stylus Task
 gulp.task( 'stylus', function() {
-    gulp.src( './source/styl/**/*.styl' )
+    gulp.src( './source/styl/main.styl' )
       .pipe(stylus({ compress: true }) )
       .pipe(concat('main.css'))
       .pipe(plumber())
