@@ -1,19 +1,18 @@
-var gulp        = require('gulp');
-var stylus      = require('gulp-stylus');
-var concat      = require('gulp-concat');
-var connect     = require('gulp-connect');
-var plumber     = require('gulp-plumber');
-var watch       = require('gulp-watch');
-var livereload  = require('gulp-livereload');
-var browserSync = require('browser-sync');
-var imagemin    = require('gulp-imagemin');
-var jeet        = require('jeet');
-var rupture     = require('rupture');
-var files       = ['index.html', './build/css/main.css', './build/js/main.js'];
-
+const gulp        = require('gulp');
+const stylus      = require('gulp-stylus');
+const concat      = require('gulp-concat');
+const connect     = require('gulp-connect');
+const plumber     = require('gulp-plumber');
+const watch       = require('gulp-watch');
+const livereload  = require('gulp-livereload');
+const browserSync = require('browser-sync');
+const imagemin    = require('gulp-imagemin');
+const jeet        = require('jeet');
+const rupture     = require('rupture');
+const files       = ['index.html', './build/css/main.css', './build/js/main.js'];
 
 //Browser Sync
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
     browserSync.init(files, {
       server: {
          baseDir: './'
@@ -22,7 +21,7 @@ gulp.task('browser-sync', function() {
 });
 
 //Stylus Task
-gulp.task( 'stylus', function() {
+gulp.task( 'stylus', () => {
     gulp.src( './source/styl/main.styl' )
       .pipe(stylus({ compress: true }) )
       .pipe(concat('main.css'))
@@ -37,20 +36,19 @@ gulp.task( 'stylus', function() {
 
 
 //Concat Javascript Task
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
   gulp.src('./source/js/*.js')
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./build/js'));
 });
 
 //Brower reload Task
-gulp.task( 'files', function() {
+gulp.task( 'files', () => {
   gulp.src( files ).pipe( connect.reload() );
 });
 
 //Minify img
-
-gulp.task('imagemin', function() {
+gulp.task('imagemin', () => {
     return gulp.src('source/img/**/*')
         .pipe(plumber())
         .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
@@ -58,7 +56,7 @@ gulp.task('imagemin', function() {
 });
 
 //Watch Task
-gulp.task( 'watch', function() {
+gulp.task( 'watch', () => {
   gulp.watch( files, [ 'files' ]);
   gulp.watch('./source/styl/**/*.styl', ['stylus']);
   gulp.watch('./source/js/*.js', ['scripts']);
@@ -67,7 +65,7 @@ gulp.task( 'watch', function() {
 
 
 //Connect Task
-gulp.task( 'connect', function() {
+gulp.task( 'connect', () => {
   connect.server({ livereload: true });
 });
 
