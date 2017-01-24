@@ -16,7 +16,9 @@
     "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.1.0",
     "jeet": "^6.1.2",
-    "rupture": "^0.6.1"
+    "rupture": "^0.6.1",
+    "gulp-watch": "4.3.11"
+
   },
   "keywords": [
     "jeet",
