@@ -20,6 +20,7 @@
     "gulp-watch": "^4.3.11",
     "jeet": "^6.1.2",
     "rupture": "^0.6.1",
+    "gulp-stylint": "^4.0.0",
     "gulp-watch": "4.3.11"
 
   },

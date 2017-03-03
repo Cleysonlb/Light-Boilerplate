@@ -9,6 +9,7 @@ const browserSync = require('browser-sync');
 const imagemin    = require('gulp-imagemin');
 const jeet        = require('jeet');
 const rupture     = require('rupture');
+const stylint     = require('gulp-stylint');
 const files       = ['index.html', './build/css/main.css', './build/js/main.js'];
 
 //Browser Sync
@@ -34,6 +35,13 @@ gulp.task( 'stylus', () => {
       .pipe( gulp.dest( './build/css' ) );
   });
 
+//Stylus lint Task
+
+gulp.task('gulp-stylint', () => {
+    gulp.src('./source/styl/**/*.styl')
+      .pipe(stylint({config: '.stylintrc'}))
+      .pipe(stylint.reporter())
+});
 
 //Concat Javascript Task
 gulp.task('scripts', () => {
@@ -61,6 +69,7 @@ gulp.task( 'watch', () => {
   gulp.watch('./source/styl/**/*.styl', ['stylus']);
   gulp.watch('./source/js/*.js', ['scripts']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+  gulp.watch('./source/styl/**/*.styl', ['gulp-stylint']);
 });
 
 
@@ -70,4 +79,4 @@ gulp.task( 'connect', () => {
 });
 
 //Default Task
-gulp.task( 'default', [ 'stylus', 'files', 'watch', 'connect', 'scripts', 'browser-sync', 'imagemin' ]);
+gulp.task( 'default', [ 'stylus', 'gulp-stylint', 'files', 'watch', 'connect', 'scripts', 'browser-sync', 'imagemin' ]);
